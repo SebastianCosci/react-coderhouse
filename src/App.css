@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilo de la marca/nombre de la tienda */
+.barranavegacion{
+  position: relative; /*posición relativa para poder ubicar el carrito al final de la barra de nav*/
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar-brand {
+  color: black; /* Color de fuente negro */
+  font-size: 20px; /* Tamaño de fuente 20px */
+  font-family: 'Trebuchet MS', sans-serif; /* Fuente Trebuchet MS */
+  text-align: left; /* Alinea el texto a la izquierda */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Estilo de los enlaces en la barra de navegación */
+.nav-link {
+  color: black; /* Color de fuente negro */
+  font-size: 16px; /* Tamaño de fuente 16px */
+  position: relative; /* Permite posicionar elementos secundarios */
+  transition: color 0.3s, border-bottom-color 0.3s; /* Transiciones suaves en hover */
   }
-  to {
-    transform: rotate(360deg);
+  
+/* Estilo de los enlaces en hover */
+.nav-link:hover {
+  color: #FF69B4; /* Color rosa claro en hover */
+  border-bottom: 2px solid #FF69B4; /* Subrayado rosa claro en hover */
   }
-}
+  
+/* Estilo de la "pelotita" antes de los enlaces */
+.nav-link::before {
+  content: '\2022'; /* Código del punto o bullet */
+  position: absolute; /* Posicionamiento absoluto */
+  left: -2px; /* Posiciona la pelotita a la izquierda del enlace */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Centra verticalmente */
+  opacity: 0; /* Inicialmente, la pelotita no es visible */
+  transition: opacity 0.3s; /* Transición de opacidad en hover */
+  }
+  
+/* Estilo de la "pelotita" en hover */
+.nav-link:hover::before {
+  opacity: 1; /* Hace visible la pelotita en hover */
+  }
+  
+.cart-widget {
+  position: absolute;
+  top: 0; /* Ajustar segun posición que quiera*/
+  right: 0; /*  Ajustar segun posición que quiera */
+  color: black; /* Cambia el color a negro */
+  }
+
+/* Cantidad de productos en el carrito */
+.badge {
+  background-color: black; /* Cambia el color de fondo a negro */
+  color: white; /* Cambia el color del texto a blanco */
+  }
+  
