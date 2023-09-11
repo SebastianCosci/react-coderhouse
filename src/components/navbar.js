@@ -1,6 +1,13 @@
 import CartWidget from './cartwidget.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ItemListContainer from './itemlistcontainer.js';
+import { Route } from 'react-router-dom';
+import Inicio from './inicio.js';
+import Contacto from './contacto.js';
+
+
 
 function NavBar() {
   return (
@@ -11,26 +18,18 @@ function NavBar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">Inicio</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Productos</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Info mayorista</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Cordones motos</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contacto</a>
-            </li>
-            <li className="nav-item cart-widget">
-              <CartWidget />
-            </li>
-          </ul>
+            <div className="nav-item">
+              <Link className="nav-Link" to="/home" >Inicio</Link>
+            </div>
+            <div className="nav-item">
+              <Link to="/productos" className="nav-Link">Productos</Link>
+            </div>
+            <div className="nav-item">
+              <Link to="/contacto" className="nav-Link" href="#">Contacto</Link>
+            </div>
+            <div className="nav-item cart-widget">
+              <CartWidget/>
+            </div>
         </div>
       </div>
     </nav>
